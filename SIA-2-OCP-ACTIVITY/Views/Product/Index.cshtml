@@ -1,4 +1,32 @@
-﻿<h2>Product Filter</h2>
+﻿@model List<SIA_2_OCP_ACTIVITY.Models.Product>
+
+@{
+    ViewData["Title"] = "Product List";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Color</th>
+            <th>Size</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Color</td>
+                <td>@product.Size</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h2>Product Filter</h2>
 
 <p><a href="@Url.Action("GreenProducts", "Product")">Green Products</a></p>
 <p><a href="@Url.Action("LargeProducts", "Product")">Large Products</a></p>

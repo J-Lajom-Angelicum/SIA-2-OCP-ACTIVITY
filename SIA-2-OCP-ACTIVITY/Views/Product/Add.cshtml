@@ -1,0 +1,36 @@
+﻿@model SIA_2_OCP_ACTIVITY.Models.ProductAddDTO
+
+@{
+    ViewData["Title"] = "Add Product";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="Add" method="post">
+    <div class="form-group">
+        <label for="Name">Product Name</label>
+        <input type="text" class="form-control" id="Name" name="Name" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Color">Color</label>
+        <select class="form-control" id="Color" name="Color" required>
+            @foreach (var color in Enum.GetValues(typeof(SIA_2_OCP_ACTIVITY.Models.Color)))
+            {
+                <option value="@color">@color</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Size">Size</label>
+        <select class="form-control" id="Size" name="Size" required>
+            @foreach (var size in Enum.GetValues(typeof(SIA_2_OCP_ACTIVITY.Models.Size)))
+            {
+                <option value="@size">@size</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Product</button>
+</form>
