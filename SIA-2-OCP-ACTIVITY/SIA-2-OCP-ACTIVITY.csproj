@@ -13,4 +13,8 @@
     <None Remove="Repository\NewFile.txt" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Mapping\" />
+  </ItemGroup>
+
 </Project>

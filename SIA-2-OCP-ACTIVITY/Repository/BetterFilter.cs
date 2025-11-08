@@ -1,5 +1,5 @@
 ﻿using SIA_2_OCP_ACTIVITY.Interfaces;
-using SIA_2_OCP_ACTIVITY.Models;
+using SIA_2_OCP_ACTIVITY.Models.Data;
 
 namespace SIA_2_OCP_ACTIVITY.Repository
 {

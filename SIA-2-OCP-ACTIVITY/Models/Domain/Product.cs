@@ -1,4 +1,4 @@
-﻿namespace SIA_2_OCP_ACTIVITY.Models
+﻿namespace SIA_2_OCP_ACTIVITY.Models.Data
 {
     public enum Color
     {
