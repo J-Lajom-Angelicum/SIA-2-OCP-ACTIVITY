@@ -1,7 +1,7 @@
 ﻿namespace SIA_2_OCP_ACTIVITY.Interfaces
 {
-    public interface IFilter
+    public interface IFilter<T>
     {
-        bool IsSatisfied(object candidate);
+        IEnumerable<T> Filter(IEnumerable<T> items, ISpecification<T> spec);
     }
 }

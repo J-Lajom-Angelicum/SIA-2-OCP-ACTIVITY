@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Product>
+
+<h2>Green Products</h2>
+
+<ul>
+    @foreach (var product in Model)
+    {
+        <li>@product.Name is @product.Color.ToString().ToLower() and @product.Size.ToString().ToLower()</li>
+    }
+</ul>
